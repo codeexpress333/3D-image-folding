@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/yma3ljw.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Folding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function () {
+            var e,
+                t = document.createElement("style");
+            return (
+                (t.innerHTML = "root: { --tmp-var: bold; }"),
+                document.head.appendChild(t),
+                (e = !!(
+                    window.CSS &&
+                    window.CSS.supports &&
+                    window.CSS.supports("font-weight", "var(--tmp-var)")
+                )),
+                t.parentNode.removeChild(t),
+                e
+            );
+        };
+        supportsCssVars() ||
+            alert(
+                "Please view this demo in a modern browser that supports CSS Variables."
+            );
+    </script>
+</head>
+
+<body class="demo-2 loading">
+
+
+    <main>
+        <div class="message">Some message for mobile (if needed).</div>
+        <div class="frame">
+            <h1 class="frame__title">3D Folded Layout</h1>
+        </div>
+        <div class="content">
+            <div class="fold-content" id="base-content">
+                <!-- CONTENT INSIDE HERE -->
+                <p class="content__type">
+                    An old silent pond <br />
+                    A frog jumps into the pond—<br />
+                    Splash! Silence again.
+                </p>
+                <img class="content__img" src="img/14.jpg" alt="Some image" />
+                <p class="content__type">
+                    A world of dew,<br />
+                    And within every dewdrop<br />
+                    A world of struggle.
+                </p>
+                <img class="content__img" src="img/13.jpg" alt="Some image" />
+                <p class="content__type">
+                    The light of a candle<br />
+                    Is transferred to another candle—<br />
+                    Spring twilight
+                </p>
+                <img class="content__img" src="img/12.jpg" alt="Some image" />
+                <p class="content__type">
+                    I write, erase, rewrite<br />
+                    Erase again, and then<br />
+                    A poppy blooms.
+                </p>
+                <img class="content__img" src="img/11.jpg" alt="Some image" />
+                <p class="content__type">
+                    Over the wintry<br />
+                    Forest, winds howl in rage<br />
+                    With no leaves to blow.
+                </p>
+                <img class="content__img" src="img/10.jpg" alt="Some image" />
+                <p class="content__type">
+                    The summer grasses.<br />
+                    All that remains<br />
+                    Of warriors’ dreams.
+                </p>
+            </div>
+            <div class="screen" id="fold-effect">
+                <div class="wrapper-3d">
+                    <div class="fold fold-before"></div>
+                    <div class="fold fold-center"></div>
+                    <div class="fold fold-after"></div>
+                </div>
+            </div>
+            <button class="btn-debug" id="btn-debug">See Planes</button>
+        </div>
+    </main>
+
+
+    <script src="imagesloaded.pkgd.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
